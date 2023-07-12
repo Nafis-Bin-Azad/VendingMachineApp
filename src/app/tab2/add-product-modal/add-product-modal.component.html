@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Product</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+    <ion-item>
+      <ion-input label="ID" formControlName="id" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Name" formControlName="name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Total Stock"
+        formControlName="totalStock"
+        type="number"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Purchase Price"
+        formControlName="purchasePrice"
+        type="number"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Box Size"
+        formControlName="boxSize"
+        type="number"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Amount in Machine"
+        formControlName="amountInMachine"
+        type="number"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Total Not in Machine"
+        formControlName="totalNotInMachine"
+        type="number"
+      ></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit" [disabled]="!productForm.valid"
+      >Save</ion-button
+    >
+  </form>
+</ion-content>

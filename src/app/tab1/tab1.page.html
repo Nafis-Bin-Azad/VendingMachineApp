@@ -17,7 +17,8 @@
           class="slot-box"
         >
           <div class="stock-value-box">
-            {{slot.product ? slot.product.stock : 0}}
+            {{slot.product ? slot.product.amountInMachine : 0}} /
+            {{slot.capacity}}
           </div>
         </div>
       </div>

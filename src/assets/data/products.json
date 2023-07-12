@@ -1,0 +1,35 @@
+[
+    {
+      "name": "Coke",
+      "amountInMachine": 10,
+      "totalStock": 20,
+      "totalNotInMachine": 10,
+      "purchasePrice": 1.5,
+      "boxSize": 24
+    },
+    {
+      "name": "Pepsi",
+      "amountInMachine": 8,
+      "totalStock": 24,
+      "totalNotInMachine": 16,
+      "purchasePrice": 1.4,
+      "boxSize": 24
+    },
+    {
+      "name": "Sprite",
+      "amountInMachine": 12,
+      "totalStock": 36,
+      "totalNotInMachine": 24,
+      "purchasePrice": 1.6,
+      "boxSize": 24
+    },
+    {
+      "name": "Dr. Pepper",
+      "amountInMachine": 6,
+      "totalStock": 18,
+      "totalNotInMachine": 12,
+      "purchasePrice": 1.7,
+      "boxSize": 24
+    }
+  ]
+  

@@ -1,11 +1,30 @@
 export class Product {
+  id: number;
   name: string;
-  price: number;
-  stock: number;
+  amountInMachine: number;
+  totalStock: number;
+  totalNotInMachine: number;
+  purchasePrice: number;
+  boxSize: number;
+  slot?: number;
 
-  constructor(name: string, price: number, stock: number) {
+  constructor(
+    id: number,
+    name: string,
+    totalStock: number,
+    purchasePrice: number,
+    boxSize: number,
+    amountInMachine = 0,
+    totalNotInMachine = totalStock,
+    slot?: number
+  ) {
+    this.id = id;
     this.name = name;
-    this.price = price;
-    this.stock = stock;
+    this.amountInMachine = amountInMachine;
+    this.totalStock = totalStock;
+    this.totalNotInMachine = totalNotInMachine;
+    this.purchasePrice = purchasePrice;
+    this.boxSize = boxSize;
+    this.slot = slot;
   }
 }
