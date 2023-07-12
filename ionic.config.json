@@ -1,0 +1,7 @@
+{
+  "name": "VendingMachineApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
