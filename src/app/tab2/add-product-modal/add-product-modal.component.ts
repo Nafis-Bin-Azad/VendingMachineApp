@@ -29,6 +29,7 @@ export class AddProductModalComponent implements OnInit {
       boxSize: ['', Validators.required],
       amountInMachine: ['', Validators.required],
       totalNotInMachine: ['', Validators.required],
+      slot: ['', Validators.required],
     });
   }
 

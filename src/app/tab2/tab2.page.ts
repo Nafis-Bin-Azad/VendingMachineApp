@@ -18,7 +18,7 @@ export class Tab2Page implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.productService.fetchProducts().subscribe((products) => {
+    this.productService.getProducts().subscribe((products) => {
       this.products = products;
     });
   }

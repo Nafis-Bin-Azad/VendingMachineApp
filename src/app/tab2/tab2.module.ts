@@ -9,6 +9,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AngularFirestoreModule,
     ExploreContainerComponentModule,
     Tab2PageRoutingModule,
   ],

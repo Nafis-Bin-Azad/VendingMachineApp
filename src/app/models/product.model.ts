@@ -1,5 +1,5 @@
 export class Product {
-  id: number;
+  id: string;
   name: string;
   amountInMachine: number;
   totalStock: number;
@@ -9,7 +9,7 @@ export class Product {
   slot?: number;
 
   constructor(
-    id: number,
+    id: string,
     name: string,
     totalStock: number,
     purchasePrice: number,
