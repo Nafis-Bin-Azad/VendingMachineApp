@@ -37,4 +37,7 @@ export class Tab2Page implements OnInit {
 
     return await modal.present();
   }
+  deleteProduct(product: Product) {
+    this.productService.deleteProduct(product);
+  }
 }

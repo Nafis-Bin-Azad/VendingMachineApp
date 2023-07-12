@@ -13,6 +13,7 @@ export class AddProductModalComponent implements OnInit {
   @Input() product!: Product;
   productForm!: FormGroup;
   isDisabled: boolean = true;
+  isUpdateMode: boolean = false;
 
   constructor(
     public modalController: ModalController,
@@ -31,6 +32,10 @@ export class AddProductModalComponent implements OnInit {
       totalNotInMachine: ['', Validators.required],
       slot: ['', Validators.required],
     });
+    if (this.product) {
+      this.isUpdateMode = true;
+      this.productForm = this.formBuilder.group(this.product);
+    }
   }
 
   dismiss() {
@@ -49,11 +54,11 @@ export class AddProductModalComponent implements OnInit {
         this.productForm.value.totalNotInMachine,
         this.productForm.value.slot
       );
-
-      // Save the product using the ProductService
-      this.productService.addProduct(product);
-
-      // Close the modal after saving the product
+      if (this.isUpdateMode) {
+        this.productService.updateProduct(product);
+      } else {
+        this.productService.addProduct(product);
+      }
       this.dismiss();
     }
   }
