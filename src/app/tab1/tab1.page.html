@@ -1,17 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Tab 1 </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-content>
+    <div class="vending-machine">
+      <div
+        *ngFor="let row of vendingMachine.rows; index as rowIndex"
+        class="row"
+      >
+        <div
+          *ngFor="let slot of row.slots; index as slotIndex"
+          (click)="openModal(slot)"
+          class="slot-box"
+        >
+          <div class="stock-value-box">
+            {{slot.product ? slot.product.stock : 0}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
 </ion-content>

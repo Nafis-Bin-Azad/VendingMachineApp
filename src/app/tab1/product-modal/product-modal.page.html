@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Product Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>Slot: {{slot.slotIndex + 1}}</p>
+  <p>Capacity: {{slot.capacity}}</p>
+  <p>Product: {{slot.product ? slot.product.name : 'Empty'}}</p>
+  <p>Quantity: {{slot.product ? slot.product.quantity : 'N/A'}}</p>
+</ion-content>
